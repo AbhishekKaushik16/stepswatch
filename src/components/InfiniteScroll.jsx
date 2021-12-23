@@ -11,7 +11,6 @@ class InfiniteScroll extends Component {
             this.setState({ isLoading: true });
             this.getBooks(this.state.page);
             console.log("Reached bottom");
-            console.log(this.isLoading);
         }
     }    
     constructor() {
@@ -39,7 +38,7 @@ class InfiniteScroll extends Component {
 
     render() {
         return (
-            <div className='container' onScroll={this.handleScroll} style={{overflowY: 'scroll', maxHeight: '400px',maxWidth: "400px", border: "solid", alignItems: "center", alignSelf: "center"}}>
+            <div className='container' onScroll={this.handleScroll} style={{overflowY: 'scroll', maxHeight: '400px',maxWidth: "400px", border: "solid", alignItems: "center", margin: "10px"}}>
                 <div>
                     {this.state.books.map((book, index) => {
                         return (
